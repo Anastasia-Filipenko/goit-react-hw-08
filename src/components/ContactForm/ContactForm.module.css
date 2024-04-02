@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+}
+
+.input {
+  width: 270px;
+}
+
+.input:hover,
+.input:focus {
+  border-color: rgb(58, 148, 181);
+}
+
+.btn {
+  width: 150px;
+  margin-top: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
