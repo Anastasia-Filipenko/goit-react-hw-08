@@ -5,7 +5,19 @@
   width: 300px;
 }
 
-.input:hover,
-.input:focus {
-  border-color: rgb(58, 148, 181);
+.label {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-left: 8px;
+}
+
+.input {
+  outline: none;
+  width: 350px;
+  border-radius: 30px;
+  padding-left: 10px;
+  height: 30px;
+  border: 2px solid #accc6d;
+  color: grey;
 }

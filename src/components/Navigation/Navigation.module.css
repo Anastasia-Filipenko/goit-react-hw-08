@@ -1,0 +1,22 @@
+.nav {
+  margin-left: 20px;
+}
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:nth-child(1) {
+  padding-right: 10px;
+}
+
+.link:focus,
+.link:hover {
+  color: #accc6d;
+}
+
+.active {
+  color: #accc6d;
+  text-decoration: underline;
+}

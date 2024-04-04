@@ -1,0 +1,32 @@
+.header {
+  height: 40px;
+  background-color: grey;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+.welcome {
+  color: #accc6d;
+  font-weight: 500;
+  color: white;
+  pointer-events: none;
+}
+
+.button {
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 5px 15px;
+  border: none;
+  background-color: #accc6d;
+  color: white;
+}
+
+.button:hover {
+  background-color: white;
+  color: #accc6d;
+}

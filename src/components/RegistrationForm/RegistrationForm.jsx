@@ -1,6 +1,16 @@
-import { Form, Field, Formik } from 'formik';
+import { Form, Field, Formik, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
+import css from '../RegistrationForm/RegistrationForm.module.css';
+const validation = Yup.object({
+  name: Yup.string()
+    .min(3, 'Too short!')
+    .max(20, 'Too long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: Yup.string().min(8, 'Too short!').required('Required'),
+});
 
 export default function RegistrationForm() {
   const dispatch = useDispatch();
@@ -9,8 +19,8 @@ export default function RegistrationForm() {
     actions.resetForm();
   };
   return (
-    <div>
-      <h2>Registration</h2>
+    <div className={css.container}>
+      <h2 className={css.title}>Registration</h2>
 
       <Formik
         initialValues={{
@@ -18,22 +28,40 @@ export default function RegistrationForm() {
           email: '',
           password: '',
         }}
+        validationSchema={validation}
         onSubmit={handleSubmit}
       >
-        <Form>
-          <label>
-            Username
-            <Field type="text" name="name" />
+        <Form className={css.form}>
+          <label htmlFor="name" className={css.label}>
+            Username:
+            <Field type="text" name="name" className={css.input} />
+            <ErrorMessage
+              className={css.error}
+              name="password"
+              component="span"
+            />
           </label>
-          <label>
-            Email
-            <Field type="email" name="email" />
+          <label htmlFor="email" className={css.label}>
+            Email:
+            <Field type="email" name="email" className={css.input} />
+            <ErrorMessage
+              className={css.error}
+              name="password"
+              component="span"
+            />
           </label>
-          <label>
-            Password
-            <Field type="password" name="password" />
-            <button type="submit">Register</button>
+          <label htmlFor="password" className={css.label}>
+            Password:
+            <Field type="password" name="password" className={css.input} />
+            <ErrorMessage
+              className={css.error}
+              name="password"
+              component="span"
+            />
           </label>
+          <button className={css.button} type="submit">
+            Register
+          </button>
         </Form>
       </Formik>
     </div>

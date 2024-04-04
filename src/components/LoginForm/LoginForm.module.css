@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  color: white;
+}
+.title {
+  font-size: 38px;
+}
 .form {
   padding-top: 20px;
   display: flex;
@@ -12,7 +23,7 @@
   align-content: center;
   align-items: center;
   width: 400px;
-  height: 250px;
+  height: 300px;
   border-radius: 20px;
   background-color: white;
   box-shadow: -9px 20px 15px rgba(0, 0, 0, 0.2);
@@ -56,4 +67,18 @@
   background-color: white;
   color: grey;
   border: 1px solid grey;
+}
+
+.span {
+  padding-top: 8px;
+  color: grey;
+}
+
+.link {
+  color: #accc6d;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: grey;
 }

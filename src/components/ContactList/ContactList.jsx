@@ -7,16 +7,18 @@ export default function ContactList() {
   const contacts = useSelector(selectFilteredContacts);
 
   return (
-    <ul className={css.list}>
-      {contacts.map(contact => (
-        <li key={contact.id} className={css.item}>
-          <Contact
-            name={contact.name}
-            number={contact.number}
-            id={contact.id}
-          />
-        </li>
-      ))}
-    </ul>
+    <div className={css.container}>
+      <ul className={css.list}>
+        {contacts.map(contact => (
+          <li key={contact.id} className={css.item}>
+            <Contact
+              name={contact.name}
+              number={contact.number}
+              id={contact.id}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

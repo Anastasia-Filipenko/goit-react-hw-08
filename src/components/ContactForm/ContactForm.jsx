@@ -32,30 +32,36 @@ export default function ContactForm() {
         actions.resetForm();
       }}
     >
-      <Form className={css.container}>
+      <Form className={css.form}>
         <div className={css.inputContainer}>
-          <label htmlFor={contactName}>Name</label>
-          <Field
-            className={css.input}
-            type="text"
-            name="name"
-            id={contactName}
-          />
+          <label htmlFor={contactName} className={css.label}>
+            Name:
+            <Field
+              className={css.input}
+              type="text"
+              name="name"
+              id={contactName}
+            />
+          </label>
+
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
 
         <div className={css.inputContainer}>
-          <label htmlFor={contactNumber}>Number</label>
-          <Field
-            className={css.input}
-            type="tel"
-            name="number"
-            id={contactNumber}
-          />
+          <label htmlFor={contactNumber} className={css.label}>
+            Number:
+            <Field
+              className={css.input}
+              type="tel"
+              name="number"
+              id={contactNumber}
+            />
+          </label>
+
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
 
-        <button className={css.btn} type="submit">
+        <button className={css.button} type="submit">
           Add contact
         </button>
       </Form>

@@ -1,15 +1,18 @@
 .list {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  margin-top: 30px;
+  list-style: none;
+  width: 90vw;
 }
 
 .item {
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 300px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin: 5px;
+  position: relative;
+  width: calc(25% - 10px);
+  height: calc(25% 10px);
+  color: white;
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: -9px 20px 15px rgba(0, 0, 0, 0.2);
 }

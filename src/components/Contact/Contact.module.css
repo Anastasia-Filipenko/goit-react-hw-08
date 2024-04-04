@@ -1,9 +1,38 @@
 .btn {
-  height: 25px;
-  margin-left: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: grey;
+  padding: 4px;
+  height: 20px;
 }
 
-.icon {
+.iconContact {
   width: 20px;
+  height: 20px;
   margin-left: 10px;
+  margin-right: 5px;
+}
+
+.iconPhone {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.iconDelete {
+  color: white;
+
+  height: 20px;
+  width: 20px;
+}
+
+.iconDelete:hover {
+  color: #accc6d;
+}
+
+.text {
+  display: flex;
+  align-items: center;
 }
