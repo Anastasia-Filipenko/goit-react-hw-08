@@ -9,10 +9,8 @@ import { refreshUser } from '../../redux/auth/operations';
 import { selectIsRefreshing } from '../../redux/auth/selectors';
 import RestrictedRoute from '../RestrictedRoute';
 import PrivateRoute from '../PrivaitePoute';
-import ContactForm from '../ContactForm/ContactForm';
-import SearchBox from '../SearchBox/SearchBox';
 
-const HomePage = lazy(() => import('../../pages/HomePage'));
+const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const ContactsPage = lazy(() =>
   import('../../pages/ContactsPage/ContactsPage')
 );
@@ -41,11 +39,7 @@ export const App = () => {
             element={
               <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
             }
-          >
-            {' '}
-            <Route path="addContact" element={<ContactForm />} />
-            <Route path="searchContact" element={<SearchBox />} />
-          </Route>
+          ></Route>
           <Route
             path="/register"
             element={

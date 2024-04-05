@@ -2,6 +2,31 @@
   background-color: grey;
   height: 50px;
   border-radius: 20px 20px 0 0;
-  border-top: 2px solid white;
+  border-top: 8px solid #accc6d;
   margin-top: auto;
+}
+
+.linkList {
+  display: flex;
+  justify-content: center;
+}
+.icon {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  color: #accc6d;
+}
+
+.icon:nth-child(1) {
+  margin-right: 10px;
+}
+
+.icon:hover {
+  color: white;
+}
+
+.lada {
+  margin-top: 10px;
+  margin-right: 15px;
+  color: #accc6d;
 }

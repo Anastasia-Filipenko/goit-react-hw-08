@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid white;
+  border-bottom: 5px solid #accc6d;
 }
 
 .welcome {

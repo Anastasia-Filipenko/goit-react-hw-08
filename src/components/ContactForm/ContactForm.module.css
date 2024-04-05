@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+.modal {
+  width: max-content;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #accc6d;
+  border-radius: 10px;
+  padding: 20px;
+}
 .form {
   padding-top: 20px;
   display: flex;
@@ -54,6 +64,46 @@
 
 .button:hover {
   background-color: white;
-  color: grey;
+  color: #accc6d;
   border: 1px solid grey;
+}
+
+.buttonOpen {
+  border: 2px solid grey;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: grey;
+  color: white;
+}
+
+.buttonOpen:hover {
+  background-color: #accc6d;
+}
+
+.modalTitle {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.closeButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #accc6d;
+  border: none;
+  width: max-content;
+  height: max-content;
+  padding: 0;
+  margin: 3px 6px 0 0;
+  cursor: pointer;
+}
+.closeModalIcon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.closeModalIcon:hover {
+  color: grey;
 }

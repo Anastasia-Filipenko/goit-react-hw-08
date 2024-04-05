@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { logIn } from '../../redux/auth/operations';
 import { NavLink } from 'react-router-dom';
 import css from '../LoginForm/LoginForm.module.css';
+import toast from 'react-hot-toast';
 
 const validation = Yup.object({
   email: Yup.string().email('Invalid email').required('Required'),
@@ -13,7 +14,14 @@ const validation = Yup.object({
 export default function LoginForm() {
   const dispatch = useDispatch();
   const handleSubmit = (values, actions) => {
-    dispatch(logIn(values));
+    dispatch(logIn(values))
+      .unwrap()
+      .then(() => {
+        toast.success('You have successfully logged in!');
+      })
+      .catch(() => {
+        toast.error('Error! Please try again.');
+      });
     actions.resetForm();
   };
   return (

@@ -1,12 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import ContactList from '../../components/ContactList/ContactList';
+import ContactForm from '../../components/ContactForm/ContactForm';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Loader from '../../components/Loader/Loader';
 import { selectError, selectLoading } from '../../redux/contacts/selectors';
 import { fetchContacts } from '../../redux/contacts/operations';
 import { useEffect } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import css from '../ContactsPage/ContactsPage.module.css';
+import SearchBox from '../../components/SearchBox/SearchBox';
 export default function Contacts() {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
@@ -19,14 +21,9 @@ export default function Contacts() {
     <div className={css.container}>
       {loading && <Loader />}
       <div className={css.linkContainer}>
-        <NavLink className={css.link} to="addContact">
-          Add Contact
-        </NavLink>
+        <ContactForm />
         <h2 className={css.title}>Phonebook</h2>
-
-        <NavLink className={css.link} to="searchContact">
-          Find Contact
-        </NavLink>
+        <SearchBox />
       </div>
       <Outlet />
       {error && <ErrorMessage />}

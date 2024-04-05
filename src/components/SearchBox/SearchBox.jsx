@@ -10,17 +10,13 @@ export default function SearchBox() {
   const filter = useSelector(selectNameFilter);
 
   return (
-    <div className={css.container}>
-      <label htmlFor={search} className={css.label}>
-        Find contact by name:
-      </label>
-      <input
-        className={css.input}
-        type="text"
-        value={filter}
-        onChange={e => dispatch(changeFilter(e.currentTarget.value))}
-        id={search}
-      />
-    </div>
+    <input
+      className={css.input}
+      placeholder="Find contact by name:"
+      type="text"
+      value={filter}
+      onChange={e => dispatch(changeFilter(e.currentTarget.value))}
+      id={search}
+    />
   );
 }

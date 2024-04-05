@@ -9,11 +9,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vh;
+  width: 80vw;
 }
 .title {
   font-size: 38px;
-  color: white;
+  color: #accc6d;
 }
 
 .link {
@@ -27,4 +27,8 @@
 
 .link:nth-child(1) {
   margin-right: 10px;
+}
+
+.link:hover {
+  background-color: #accc6d;
 }
