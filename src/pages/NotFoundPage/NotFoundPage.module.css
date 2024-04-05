@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  text-align: center;
+}
+
+.link {
+  background-color: #accc6d;
+  padding: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.link:hover {
+  background-color: grey;
+  color: white;
+}
