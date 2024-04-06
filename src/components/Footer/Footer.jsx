@@ -5,9 +5,6 @@ export default function Footer() {
   return (
     <footer className={css.footer}>
       <div className={css.linkList}>
-        <a href="https://t.me/yxuuf" className={css.lada}>
-          With love for my inspiration
-        </a>
         <a href="https://www.linkedin.com/in/anastasiia-filipenko-10a872183/">
           <CiLinkedin className={css.icon} />
         </a>

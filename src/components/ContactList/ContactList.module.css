@@ -30,3 +30,13 @@
 .list::-webkit-scrollbar-thumb {
   background-color: #accc6d;
 }
+
+@media screen and (max-width: 768px) {
+  .list {
+    flex-direction: column;
+    padding: 0;
+  }
+  .item {
+    width: calc(100% - 10px);
+  }
+}

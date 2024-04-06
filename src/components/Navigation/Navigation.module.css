@@ -20,3 +20,9 @@
   color: #accc6d;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+  .link {
+    font-size: 14px;
+  }
+}

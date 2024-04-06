@@ -32,3 +32,10 @@
 .link:hover {
   background-color: #accc6d;
 }
+
+@media screen and (max-width: 768px) {
+  .linkContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
