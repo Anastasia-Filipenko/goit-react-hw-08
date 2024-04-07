@@ -13,3 +13,10 @@
   background-color: white;
   color: #accc6d;
 }
+
+.welcome {
+  color: #accc6d;
+  font-weight: 500;
+  color: white;
+  pointer-events: none;
+}

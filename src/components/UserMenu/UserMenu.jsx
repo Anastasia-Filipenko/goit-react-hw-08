@@ -1,14 +1,15 @@
 import { logOut } from '../../redux/auth/operations';
 import { useDispatch, useSelector } from 'react-redux';
 import css from '../UserMenu/UserMenu.module.css';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { selectUser } from '../../redux/auth/selectors';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const user = useSelector(selectUser);
 
   return (
-    isLoggedIn && (
+    <>
+      <p className={css.welcome}>Welcome, {user}</p>
       <button
         className={css.button}
         onClick={() => {
@@ -17,6 +18,6 @@ export default function UserMenu() {
       >
         Logout
       </button>
-    )
+    </>
   );
 }
